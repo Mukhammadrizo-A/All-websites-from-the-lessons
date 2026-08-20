@@ -1,0 +1,101 @@
+@mixin df($num1, $num2, $num3) {
+    display: flex;
+    flex-direction: $num1;
+    justify-content: $num2;
+    align-items: $num3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 130dvh;
+    @include df(column, space-evenly, center);
+
+    nav {
+        width: 100%;
+        height: 20dvh;
+        background-color: rgba(0, 0, 0, 0.548);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        @include df(row, space-evenly, center);
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            font-family: cursive;
+            transition: all 0.5s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    main {
+        width: 90%;
+        height: 90%;
+        @include df(row, space-evenly, center);
+        flex-wrap: wrap;
+
+        form {
+            width: 300px;
+            height: 500px;
+            background-color: aqua;
+            border-radius: 40px;
+            @include df(column, space-evenly, center);
+            margin-bottom: 20px;
+            transition: all 0.5s;
+
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 10px 10px 20px black;
+            }
+
+            input {
+                width: 50%;
+                height: 8%;
+                border-radius: 40px;
+                border: none;
+                text-align: center;
+                font-family: cursive;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 10px 10px 20px black;
+                }
+
+                &::placeholder {
+                    text-align: center;
+                }
+            }
+
+            button {
+                width: 60%;
+                height: 15%;
+                border-radius: 20px;
+                border: none;
+                background-color: chartreuse;
+                transition: all 0.5s;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.1rem;
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 10px 10px 20px black;
+                }
+            }
+
+            p{
+                color: gold;
+                font-size: 1.2rem;
+                @include df(column, space-evenly, none);
+            }
+        }
+    }
+}

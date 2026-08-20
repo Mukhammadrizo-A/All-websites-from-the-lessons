@@ -1,0 +1,75 @@
+@mixin df($num1,$num2, $num3){
+    display: flex;
+    flex-direction: $num1;
+    justify-content: $num2;
+    align-items: $num3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100dvh;
+    @include df(column, space-evenly, center);
+    background-image: url(../Images/Natural_mountain.jpg);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    nav{
+        width: 100%;
+        height: 20%;
+        background-color: rgba(0, 0, 0, 0.548);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        @include df(row, space-evenly, center);
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            font-family: cursive;
+            transition: all 0.5s;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    main{
+        width: 100%;
+        height: 60%;
+        // background-color: rgba(255, 255, 255, 0.795);
+        border-radius: 20px;
+        @include df(row, center, center);
+
+        p{
+            color: white;
+            text-align: center;
+            font-family: cursive;
+            font-size: 1.5rem;
+        }
+    }
+
+    footer{
+        width: 100%;
+        height: 20%;
+        background-color: rgba(0, 0, 0, 0.548);
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        @include df(row, space-evenly, center);
+
+        p{
+            color: white;
+            font-family: cursive;
+            font-size: 1.05rem;
+
+            span{
+                color: darkgray;
+            }
+        }
+    }
+}
