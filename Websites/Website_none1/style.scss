@@ -121,6 +121,15 @@ body{
             }
         }
     }
+    
+    .original{
+        width: 100%;
+
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 
     main{
         width: 100%;
@@ -132,8 +141,6 @@ body{
             width: 80%;
             height: 35%;
             @include df(row, space-evenly, center);
-            
-            // border: 1px solid black;
 
             div:nth-child(1){
                 width: 45%;
@@ -158,8 +165,6 @@ body{
                     height: 10%;
                     // margin-top: 30px;
                     @include df(row, none, center);
-
-                    // border: 1px solid black;
 
                     button{
                         width: 30%;
@@ -197,8 +202,6 @@ body{
             height: 25%;
             margin-top: 30px;
             @include df(column, space-evenly, center);
-
-            // border: 1px solid black;
 
             h1{
                 text-align: center;
@@ -246,14 +249,10 @@ body{
             height: 100%;
             @include df(column, space-between, none);
 
-            // border: 1px solid black;
-
             .gl-3-1-1{
                 width: 50%;
                 height: 20%;
                 @include df(column, none, none);
-
-                // border: 1px solid black;
 
                 p{
                     color:rgb(56, 56, 56);
@@ -268,8 +267,6 @@ body{
             .gl-3-1-2{
                 width: 100%;
                 height: 50%;
-
-                // border: 1px solid black;
 
                 .gl-3-1-2-1{
                     width: 100%;
