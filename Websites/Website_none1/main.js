@@ -5,6 +5,7 @@ function change_theme() {
     let text = document.querySelectorAll('[name = "text"]');
     let b_text = document.getElementById('b_text');
     let img = document.getElementById('img');
+    let nav = document.getElementById('navbar');
 
     if (theme) {
         now.style.marginLeft = '0%';
@@ -16,6 +17,8 @@ function change_theme() {
         for (let i = 0; i < text.length; i++) {
             text[i].style.color = 'white';
         }
+        nav.style.backgroundColor = 'rgba(177, 173, 173, 0.548)';
+        
         theme = false;
     } else {
         now.style.marginLeft = '50%';
@@ -27,6 +30,8 @@ function change_theme() {
         for (let i = 0; i < text.length; i++) {
             text[i].style.color = 'black';
         }
+        nav.style.backgroundColor = 'rgba(0, 0, 0, 0.548)';
+        
         theme = true;
     }
 }
