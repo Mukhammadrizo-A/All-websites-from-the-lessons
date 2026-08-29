@@ -13,7 +13,7 @@
 body{
     width: 100%;
     height: 200dvh;
-    background-image: url(img.jpg);
+    background-image: url(../../Images/img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     @include df(column, space-evenly, center);
