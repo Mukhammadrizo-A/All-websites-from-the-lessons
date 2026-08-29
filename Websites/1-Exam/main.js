@@ -21,7 +21,7 @@ function func1(){
         button1.style.backgroundColor = 'green';
         button1.style.color = 'white';
         document.body.style.backgroundColor = 'none';
-        document.body.style.backgroundImage = 'url(img.jpg)';
+        document.body.style.backgroundImage = 'url(../../Images/img.jpg)';
 
         num1 = true
     }
@@ -187,7 +187,7 @@ function func9(){
         button9.style.backgroundColor = 'green';
         button9.style.color = 'white';
         document.body.style.backgroundColor = 'none';
-        document.body.style.backgroundImage = 'url(img.jpg)';
+        document.body.style.backgroundImage = 'url(../../Images/img.jpg)';
 
         num9 = true
     }
