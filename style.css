@@ -32,6 +32,7 @@ body nav a {
   color: white;
   font-size: 0.8rem;
   transition: all 0.5s;
+  text-align: center;
 }
 body main {
   width: 100%;
