@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 200dvh;
+  background-image: url(img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main div {
+  width: 80%;
+  height: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.384);
+  border-radius: 20px;
+}
+body main div p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body main div button {
+  width: 25%;
+  height: 40%;
+  font-size: 1.7rem;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  background-color: green;
+  border: 2px solid black;
+}
+body main .task-3, body main .task-4, body main .task-8 {
+  height: 15%;
+}
+body main .task-3 button, body main .task-4 button, body main .task-8 button {
+  height: 27%;
+}
+body main .task-3 .images, body main .task-4 .images, body main .task-8 .images {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main .task-3 .images img, body main .task-4 .images img, body main .task-8 .images img {
+  height: 80%;
+  aspect-ratio: 1/1;
+}
+body main .task-4 .images img {
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */

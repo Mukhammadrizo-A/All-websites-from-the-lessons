@@ -1,0 +1,76 @@
+@mixin df($num1, $num2, $num3){
+    display: flex;
+    flex-direction: $num1;
+    justify-content: $num2;
+    align-items: $num3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 200dvh;
+    background-image: url(img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include df(column, space-evenly, center);
+
+    main{
+        width: 100%;
+        height: 90%;
+        @include df(column, space-evenly, center);
+
+        div{
+            width: 80%;
+            height: 8%;
+            @include df(column, space-evenly, center);
+            background-color: rgba(0, 0, 0, 0.384);
+            border-radius: 20px;
+
+            p{
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                width: 25%;
+                height: 40%;
+                font-size: 1.7rem;
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+                background-color: green;
+                border: 2px solid black;
+            }
+        }
+
+        .task-3, .task-4, .task-8{
+            height: 15%;
+
+            button{
+                height: 27%;
+            }
+
+            .images{
+                width: 90%;
+                height: 50%;
+                @include df(row, space-evenly, center);
+
+                img{
+                    height: 80%;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+
+        .task-4{
+            .images{
+                img{
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
