@@ -27,10 +27,10 @@ body nav {
   flex-wrap: wrap;
 }
 body nav a {
+  width: 30%;
   text-decoration: none;
   color: white;
   font-size: 0.8rem;
-  margin-left: 10px;
   transition: all 0.5s;
 }
 body nav a:hover {
