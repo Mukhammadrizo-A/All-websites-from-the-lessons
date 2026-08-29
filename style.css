@@ -27,7 +27,7 @@ body nav {
   flex-wrap: wrap;
 }
 body nav a {
-  width: 30%;
+  width: 100px;
   text-decoration: none;
   color: white;
   font-size: 0.8rem;
