@@ -1,0 +1,108 @@
+@mixin df($num1, $num2, $num3){
+    display: flex;
+    flex-direction: $num1;
+    justify-content: $num2;
+    align-items: $num3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 200dvh;
+    background-image: url(../../Images/Natural_mountain.jpg);
+    background-size: cover;
+
+    nav {
+        width: 100%;
+        height: 20dvh;
+        background-color: rgba(0, 0, 0, 0.548);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        @include df(row, space-evenly, center);
+        flex-wrap: wrap;
+
+        a {
+            width: 100px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.5s;
+        }
+    }
+
+    main{
+        width: 100%;
+        height: 90%;
+        @include df(column, space-evenly, center);
+
+        .boxes{
+            width: 90%;
+            height: 23%;
+            border-radius: 30px;
+            background-color: teal;
+            @include df(column, space-evenly, center);
+
+            .box_1{
+                height: 40%;
+                aspect-ratio: 1/1;
+                background-color: dimgrey;
+                border-radius: 20px;
+                border: 3px solid black;
+            }
+
+            h1{
+                color: dimgrey;
+                transition: all 0.5s;
+
+                &.active{
+                    color: green;
+                    animation-name: text;
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                }
+            }
+
+            h2{
+                color: white;
+            }
+        }
+
+        div:nth-child(4){
+            @include df(row, space-evenly, center);
+            flex-wrap: wrap;
+            
+            .box_2{
+                height: 40%;
+                aspect-ratio: 1/1;
+                background-color: red;
+                border-radius: 20px;
+                border: 3px solid black;
+                @include df(row, center, center);
+            }
+        }
+    }
+}
+
+@keyframes text{
+    25%{
+        color: yellow;
+        transform: scale(1.1);
+    }
+    50%{
+        color: aqua;
+        transform: scale(1);
+    }
+    75%{
+        color: red;
+        transform: scale(1.1);
+    }
+    100%{
+        color:darkmagenta;
+        transform: scale(1);
+    }
+}
