@@ -1,0 +1,111 @@
+@mixin df($num1, $num2, $num3){
+    display: flex;
+    flex-direction: $num1;
+    justify-content: $num2;
+    align-items: $num3;
+    flex-wrap: wrap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 250dvh;
+    @include df(column, space-evenly, center);
+
+    nav {
+        width: 100%;
+        height: 20dvh;
+        background-color: rgba(0, 0, 0, 0.548);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        @include df(row, space-evenly, center);
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            font-family: cursive;
+            transition: all 0.5s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    main{
+        width: 100%;
+        height: 90%;
+        @include df(column, space-between, center);
+
+        .gl{
+            width: 90%;
+            height: 40%;
+            background-color: rgba(0, 0, 0, 0.425);
+            border-radius: 40px;
+            @include df(column, space-evenly, center);
+
+            .restart{
+                height: 5dvh;
+                aspect-ratio: 1/1;
+                margin-left: 80%;
+                border-radius: 50%;
+                border: none;
+                background-color: black;
+                color: white;
+            }
+
+            div{
+                width: 80%;
+                height: 25%;
+                background-color: rgba(0, 0, 0, 0.308);
+                border-radius: 20px;
+                @include df(row, space-evenly, center);
+
+                p{
+                    text-align: center;
+                    color: white;
+                }
+
+                .text3:nth-child(1){
+                    color: darkred;
+                }
+                .text3:nth-child(2){
+                    color: darkmagenta;
+                }
+                .text3:nth-child(3){
+                    color: blue;
+                }
+
+                img{
+                    height: 45%;
+                    aspect-ratio: 1/1;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
+
+                .btn1{
+                    width: 20%;
+                    height: 20%;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: white;
+                    color: black;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .gl:nth-child(2){
+            height: 58%;
+
+            div{
+                height: 19%;
+            }
+        }
+    }
+}

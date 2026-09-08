@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 250dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body nav {
+  width: 100%;
+  height: 20dvh;
+  background-color: rgba(0, 0, 0, 0.548);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-family: cursive;
+  transition: all 0.5s;
+}
+body nav a:hover {
+  transform: scale(1.2);
+}
+body main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .gl {
+  width: 90%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .gl .restart {
+  height: 5dvh;
+  aspect-ratio: 1/1;
+  margin-left: 80%;
+  border-radius: 50%;
+  border: none;
+  background-color: black;
+  color: white;
+}
+body main .gl div {
+  width: 80%;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.308);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .gl div p {
+  text-align: center;
+  color: white;
+}
+body main .gl div .text3:nth-child(1) {
+  color: darkred;
+}
+body main .gl div .text3:nth-child(2) {
+  color: darkmagenta;
+}
+body main .gl div .text3:nth-child(3) {
+  color: blue;
+}
+body main .gl div img {
+  height: 45%;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .gl div .btn1 {
+  width: 20%;
+  height: 20%;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-size: 0.9rem;
+}
+body main .gl:nth-child(2) {
+  height: 58%;
+}
+body main .gl:nth-child(2) div {
+  height: 19%;
+}/*# sourceMappingURL=style.css.map */
