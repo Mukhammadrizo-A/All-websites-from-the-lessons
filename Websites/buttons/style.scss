@@ -1,0 +1,61 @@
+@mixin df($num1, $num2, $num3){
+    display: flex;
+    flex-direction: $num1;
+    justify-content: $num2;
+    align-items: $num3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(59, 58, 58);
+    @include df(column, space-between, center);
+
+    nav{
+        width: 100%;
+        min-height: 20vh;
+        background-color: rgba(0, 0, 0, 0.548);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        @include df(row, space-evenly, center);
+        flex-wrap: wrap;
+        margin: 0;
+
+        a{
+            width: 100px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.5s;
+            text-align: center;
+        }
+    }
+
+    main{
+        width: 100%;
+        height: 80%;
+        @include df(row, space-evenly, center);
+        flex-wrap: wrap;
+
+        button {
+        width: 25%;
+        height: 10%;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: green;
+        color: white;
+        margin: 20px;
+        // transition: all 0.5s;
+
+        &:active {
+            background-color: red;
+            color: black;
+        }
+    }
+    }
+}
